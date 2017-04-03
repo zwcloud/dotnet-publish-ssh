@@ -4,26 +4,26 @@ Simple publish your .Net Core application to linux server via SSH.
 
 # Usage
 
-* Add this to you project's `*.csproj` file:
-```
-  <ItemGroup>
-    <DotNetCliToolReference Include="DotnetPublishSsh" Version="0.0.4" />
-  </ItemGroup>
-```
+1. Add this to you project's `*.csproj` file:
+    ```XML
+    <ItemGroup>
+      <DotNetCliToolReference Include="DotnetPublishSsh" Version="0.0.4" />
+    </ItemGroup>
+    ```
 
-* Run `dotnet restore`
-* Run `dotnet publish-ssh` inside the project dir with options:
-```
-Usage: dotnet publish-ssh [arguments] [options]
-Arguments and options are the same as for `dotnet publish`
-SSH specific options:
-  --ssh-host *              Host address
-  --ssh-port                Host port
-  --ssh-user *              User name
-  --ssh-password            Password
-  --ssh-path *              Publish path on remote server
-(*) required
-```
+2. Run `dotnet restore`
+3. Run `dotnet publish-ssh` inside the project dir with options:
+    ```
+    Usage: dotnet publish-ssh [arguments] [options]
+    Arguments and options are the same as for `dotnet publish`
+    SSH specific options:
+      --ssh-host *              Host address
+      --ssh-port                Host port
+      --ssh-user *              User name
+      --ssh-password            Password
+      --ssh-path *              Publish path on remote server
+    (*) required
+    ```
 
 # Example
 
